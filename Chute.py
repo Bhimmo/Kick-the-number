@@ -13,15 +13,16 @@ def jogo():
             global nova
             numP = random.randint(1,100)
             num = int(input("\nDigite um número de 1 a 100\nResposta: "))
-            tent = 0
+            tent = 1
             while num != numP:
                 if num > 100 or num < 0:
-                    print("\tSó aceito número entre 1 e 100")
+                    print("\tSó pode números entre 1 e 100")
                 if num < numP:
                     print("\tAumente seu número")
+                    tent += 1
                 if num > numP:
                     print("\tDiminua seu número")
-                tent += 1
+                    tent += 1
                 num = int(input("\n \033[31m Tente outro número: \033[m"))
 
             print("\n\033[32mPARABÉNS\033[m\n")
